@@ -7,8 +7,7 @@ const G = ["G", "B", "D", ""]
 const A = ["A", "C", "E", ""]
 
 export function decipher() {
-  let outputStr = ""
-
+  let outputStr = ''
   fs.readFile("./ttls.musicxml", "utf8", (err, data) => {
     if (err) {
       console.warn(err)
@@ -19,7 +18,7 @@ export function decipher() {
     let startPosition = start.exec(data)
     let end = /<bar-style>light-light<\/bar-style>/
     let endPosition = end.exec(data)
-    var encypted
+    var encypted = ''
     if (endPosition) {
       encypted = data.substring(startPosition.index, endPosition.index)
     } else {
@@ -67,11 +66,13 @@ export function decipher() {
         binaryString += " "
       }
     }
-
     outputStr = String.fromCharCode(
       ...binaryString.split(" ").map((bin) => parseInt(bin, 2))
     )
-  })
 
+    console.log(outputStr)
+  })
   return outputStr
 }
+
+decipher()

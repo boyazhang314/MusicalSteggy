@@ -13,19 +13,21 @@ const A = ['A', 'C', 'E', '']
 function tone(index, octave, voice, staff, binary) {
     let tones = ''
     let pitch = '';
-    for (let k = 0; k < 8; k++) {
+    for (let k = 0; k < 4; k++) {
+        let bin = parseInt(binary.substr((k * 2), 2), 2)
+        bin = Number.isInteger(bin) ? bin : -1
         switch(HARMONY[index + k]) {
             case 'C':
-                pitch = C[Math.floor(Math.random() * 4)];
+                pitch = bin === -1 ? C[Math.floor(Math.random() * 4)] : C[bin]
                 break;
             case 'F':
-                pitch = F[Math.floor(Math.random() * 4)];
+                pitch = bin === -1 ? F[Math.floor(Math.random() * 4)] : F[bin]
                 break;
             case 'G':
-                pitch = G[Math.floor(Math.random() * 4)];
+                pitch = bin === -1 ? G[Math.floor(Math.random() * 4)] : G[bin]
                 break;
             case 'A':
-                pitch = A[Math.floor(Math.random() * 4)];
+                pitch = bin === -1 ? A[Math.floor(Math.random() * 4)] : A[bin]
                 break;
         }
         tones += note(pitch, octave, voice, 0.5, staff)
@@ -38,6 +40,7 @@ function tone(index, octave, voice, staff, binary) {
 export function accompaniment(lyrics) {
     let acc = '';
     const binary = lyrics ? textToBin(lyrics) : ''
+
     let poi = 0
 
     for (let i = 0; i < HARMONY.length; i += 8) {
@@ -49,16 +52,18 @@ export function accompaniment(lyrics) {
 
         // note value
         for (let j = 0; j < 4; j++) {
-            let substr = binary.substring(poi, poi + 8)
-            if (poi + 8 >= binary.length) {
-                substr = ''
+            for (let l = 0; l <= 4; l += 4) {
+                let substr = binary.substring(poi, poi + 8)
+                if (poi >= binary.length) {
+                    substr = ''
+                }
+                memo += tone(i + l, 5 - j, j + 1, j < 2 ? 1 : 2, substr)
                 if (poi + 8 === binary.length) {
                     memo += STOP
                 }
+                if (j != 3) memo += back(4)
+                poi += 8
             }
-            memo += tone(i, 5 - j, j + 1, j < 2 ? 1 : 2, substr)
-            if (j != 3) memo += back(4)
-            poi += 8
         }
 
         // last measure
@@ -87,7 +92,7 @@ export function textToBin(text) {
 const sheet = HEAD 
             + TwinkleTwinkleLittleStar(1, 5, 1, 1)
             + '<part id="P2">'
-            + accompaniment('hello')
+            + accompaniment('I am amazing and I love Kevin')
             + '</part>'
             + TAIL
 
