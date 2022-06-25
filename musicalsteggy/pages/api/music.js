@@ -1,14 +1,13 @@
-import { textToBin } from "../../server/compose"
+import { accompaniment } from "../../server/compose"
 
-const lyrics = { text: '' }
+const lyrics = { text: '', musicXML: '' }
 
 export default function handler(req, res) {
   if (req.method === 'POST') {
     lyrics.text = JSON.parse(req.body).text
     res.status(200).json({ success: lyrics.text })
   } else if (req.method === "GET") {
-    const binary = textToBin(lyrics.text)
-
-    res.status(200).json({ binary: binary })
+    lyrics.musicXML = accompaniment(lyrics.text)
+    res.status(200).json({ musicXML: lyrics.musicXML })
   }
 }

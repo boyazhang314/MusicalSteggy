@@ -36,8 +36,9 @@ function tone(index, octave, voice, staff) {
 }
 
 // generate accompaniment
-function accompaniment() {
+export function accompaniment(lyrics) {
     let acc = '';
+    const binary = lyrics ? textToBin(lyrics) : ''
 
     for (let i = 0; i < HARMONY.length; i += 8) {
         // first note of the bar
