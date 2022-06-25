@@ -113,7 +113,9 @@
 <stop offset="0.929752" stop-color="#ffc101"/>
 </linearGradient>
 </defs>
-<g id="Sketch" vectornator:layerName="Sketch" visibility="hidden"/>
+<g id="Sketch" vectornator:layerName="Sketch">
+<path d="M141.157 1317.98C141.157 1250.3 382.292 1195.44 679.748 1195.44C977.204 1195.44 1218.34 1250.3 1218.34 1317.98C1218.34 1385.66 977.204 1440.52 679.748 1440.52C382.292 1440.52 141.157 1385.66 141.157 1317.98Z" fill="#000000" fill-opacity="0.209459" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
 <g id="Color" vectornator:layerName="Color">
 <g opacity="1">
 <g opacity="1">

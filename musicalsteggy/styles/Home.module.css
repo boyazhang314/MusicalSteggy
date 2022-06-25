@@ -24,7 +24,7 @@
 
 .description {
   color: white;
-  margin: 2%;
+  margin: 1%;
   font-size: 4vh;
   font-family: 'Caveat', 'cursive';
 
@@ -39,13 +39,14 @@
   font-family: 'Caveat', 'cursive';
 
   height: fit-content;
-  width: 50vh;
+  width: 60vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin-top: 3%;
+  margin-top: 5%;
+  z-index: 1;
 }
 
 .img {
@@ -61,6 +62,8 @@
   position: absolute;
   right: 10em;
   bottom: 2em;
+
+  z-index: 0;
 
   user-select: none;
 }

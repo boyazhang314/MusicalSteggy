@@ -69,6 +69,15 @@ function accompaniment() {
     return acc;
 }
 
+// convert text to binary string
+export function textToBin(text) {
+    let bin = '';
+    bin = text.toString().split('').map(char => {
+        return char.charCodeAt(0).toString(2).padStart(8, "0");
+    }).join('');
+    return bin;
+}
+
 const sheet = HEAD 
             + TwinkleTwinkleLittleStar(1, 5, 1, 1)
             + '<part id="P2">'
