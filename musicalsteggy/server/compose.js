@@ -10,9 +10,8 @@ const G = ['G', 'B', 'D', '']
 const A = ['A', 'C', 'E', '']
 
 // generate tone
-function tone(index, octave, voice, staff) {
+function tone(index, octave, voice, staff, binary) {
     let tones = ''
-
     let pitch = '';
     for (let k = 0; k < 8; k++) {
         switch(HARMONY[index + k]) {
@@ -39,6 +38,7 @@ function tone(index, octave, voice, staff) {
 export function accompaniment(lyrics) {
     let acc = '';
     const binary = lyrics ? textToBin(lyrics) : ''
+    let poi = 0
 
     for (let i = 0; i < HARMONY.length; i += 8) {
         // first note of the bar
@@ -48,13 +48,18 @@ export function accompaniment(lyrics) {
         if (i === 0) memo += START
 
         // note value
-        memo += tone(i, 5, 1, 1)
-        memo += back(4)
-        memo += tone(i, 4, 2, 1)
-        memo += back(4)
-        memo += tone(i, 3, 3, 2)
-        memo += back(4)
-        memo += tone(i, 2, 4, 2)
+        for (let j = 0; j < 4; j++) {
+            let substr = binary.substring(poi, poi + 8)
+            if (poi + 8 >= binary.length) {
+                substr = ''
+                if (poi + 8 === binary.length) {
+                    memo += STOP
+                }
+            }
+            memo += tone(i, 5 - j, j + 1, j < 2 ? 1 : 2, substr)
+            if (j != 3) memo += back(4)
+            poi += 8
+        }
 
         // last measure
         if (i === HARMONY.length - 1) {
@@ -82,7 +87,7 @@ export function textToBin(text) {
 const sheet = HEAD 
             + TwinkleTwinkleLittleStar(1, 5, 1, 1)
             + '<part id="P2">'
-            + accompaniment()
+            + accompaniment('hello')
             + '</part>'
             + TAIL
 
