@@ -3,7 +3,7 @@
 ![Website Screenshot](homepage.png)
 
 ## About
-Musical Steggy is a web app that performs music steganography, hiding text in music. The entered text is transformed into musical notes that accompany the lullaby "Twinkle Twinkle Little Star". [Here]([here](https://www.soundslice.com/slices/vmRkc/)) is an example of what "hello" could sound like.
+Musical Steggy is a web app that performs music steganography, hiding text in music. The entered text is transformed into musical notes that accompany the lullaby "Twinkle Twinkle Little Star". [Here](https://www.soundslice.com/slices/vmRkc/) is an example of what "hello" could sound like.
 
 
 ### Built With
