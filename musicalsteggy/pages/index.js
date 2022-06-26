@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Link from "next/link"
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
+import Image from "next/image"
 
 import Moon from "../components/moon/Moon"
 import Steggy from "../components/steggy/Steggy"
@@ -44,8 +45,17 @@ export default function Home() {
         <link rel="icon" href="/images/Music.svg" />
       </Head>
 
-      <body background="/images/background1.svg" className={styles.container}>
+      <div>
         <main className={styles.main}>
+          <div className={styles.bgWrap}>
+            <Image
+              alt="background"
+              src="/images/background1.svg"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </div>
           <div className={styles.title}>Musical Steggy</div>
 
           <div className={styles.description}>
@@ -88,7 +98,7 @@ export default function Home() {
             bottom="1em"
           />
         </main>
-      </body>
+      </div>
     </>
   )
 }

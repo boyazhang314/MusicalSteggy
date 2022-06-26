@@ -1,63 +1,75 @@
-import React, { useState } from 'react'
-import Link from 'next/link';
-import styles from '../styles/Upload.module.css'
+import React, { useState } from "react"
+import Link from "next/link"
+import styles from "../styles/Upload.module.css"
+import Image from "next/image"
+import background from "../public/images/background3.svg"
 
-import Moon from '../components/moon/Moon'
-import Steggy from '../components/steggy/Steggy';
-import DragDrop from '../components/dragDrop/DragDrop'
+import Moon from "../components/moon/Moon"
+import Steggy from "../components/steggy/Steggy"
+import DragDrop from "../components/dragDrop/DragDrop"
 
-const fileTypes = ['musicxml', 'xml']
+const fileTypes = ["musicxml", "xml"]
 
 export default function Upload() {
-    const [file, setFile] = useState('')
-    const [lyrics, setLyrics] = useState('')
+  const [file, setFile] = useState("")
+  const [lyrics, setLyrics] = useState("")
 
-    const upload = async (file) => {
-        const reader = new FileReader()
-        reader.onload = async (e) => { 
-            const text = (e.target.result)
-            setFile(text)
-            interpret(text)
-        }
-        reader.readAsText(file[0])
+  const upload = async (file) => {
+    const reader = new FileReader()
+    reader.onload = async (e) => {
+      const text = e.target.result
+      setFile(text)
+      interpret(text)
     }
+    reader.readAsText(file[0])
+  }
 
-    const interpret = async (lyrics) => {
-        try {
-            const config = {
-              method: 'POST',
-              body: JSON.stringify({
-                job: 'interpret',
-                text: lyrics
-              })
-            }
-            const res = await fetch('/api/music', config)
-            const data = await res.json()
-            setLyrics(data.interpretation.slice(0, -1))
-        } catch (err) {
-            console.warn(err)
-        }
+  const interpret = async (lyrics) => {
+    try {
+      const config = {
+        method: "POST",
+        body: JSON.stringify({
+          job: "interpret",
+          text: lyrics,
+        }),
+      }
+      const res = await fetch("/api/music", config)
+      const data = await res.json()
+      setLyrics(data.interpretation.slice(0, -1))
+    } catch (err) {
+      console.warn(err)
     }
+  }
 
-    const message = lyrics ? (
-        <div className={styles.bubble}>
-            {lyrics}
-        </div>
-    ) : ('')
+  const message = lyrics ? <div className={styles.bubble}>{lyrics}</div> : ""
 
-    return (
-        <body background="/images/background3.svg" className={styles.container}>
-            <div className={styles.main}>
-                <div className={styles.title}>Steggy&apos;s Interpretation</div>
+  return (
+    <div>
+      <div className={styles.bgWrap}>
+        <Image
+          alt="background"
+          src="/images/background3.svg"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
+      <div className={styles.main}>
+        <div className={styles.title}>Steggy&apos;s Interpretation</div>
 
-                <Moon top='5em' right='20em' height='20vh' />
+        <Moon top="5em" right="20em" height="20vh" />
 
-                <DragDrop handleFiles={upload} />
+        <DragDrop handleFiles={upload} />
 
-                {message}
+        {message}
 
-                <Steggy src="/images/Steggy2.svg" width='50vh' bottom='1em' right='3em' />
-            </div>
-        </body>
-    )
+        <Steggy
+          src="/images/Steggy2.svg"
+          width="50vh"
+          bottom="1em"
+          right="3em"
+        />
+      </div>
+    </div>
+  )
 }
