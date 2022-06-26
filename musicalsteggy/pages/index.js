@@ -50,7 +50,7 @@ export default function Home() {
           <div className={styles.bgWrap}>
             <Image
               alt="background"
-              src="/images/background1.svg"
+              src="/background1.svg"
               layout="fill"
               objectFit="cover"
               quality={100}

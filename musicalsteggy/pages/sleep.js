@@ -34,7 +34,7 @@ export default function Sleep() {
       <div className={styles.bgWrap}>
         <Image
           alt="background"
-          src="/images/background2.svg"
+          src="/background2.svg"
           layout="fill"
           objectFit="cover"
           quality={100}
