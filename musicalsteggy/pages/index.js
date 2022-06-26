@@ -45,17 +45,8 @@ export default function Home() {
         <link rel="icon" href="/images/Music.svg" />
       </Head>
 
-      <div>
+      <div className={styles.container}>
         <main className={styles.main}>
-          <div className={styles.bgWrap}>
-            <Image
-              alt="background"
-              src="/Background1.svg"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
           <div className={styles.title}>Musical Steggy</div>
 
           <div className={styles.description}>

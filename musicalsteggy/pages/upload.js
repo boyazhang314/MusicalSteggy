@@ -43,20 +43,11 @@ export default function Upload() {
   const message = lyrics ? <div className={styles.bubble}>{lyrics}</div> : ""
 
   return (
-    <div>
-      <div className={styles.bgWrap}>
-        <Image
-          alt="background"
-          src="/Background3.svg"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-      </div>
+    <div className={styles.container}>
       <div className={styles.main}>
         <div className={styles.title}>Steggy&apos;s Interpretation</div>
 
-        <Moon top="5em" right="20em" height="20vh" />
+        <Moon top='5em' right='20em' height='20vh' />
 
         <DragDrop handleFiles={upload} />
 

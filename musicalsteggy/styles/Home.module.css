@@ -10,7 +10,7 @@
 }
 
 .container {
-  /* background-image: url("../public/images/Background1.svg"); */
+  background-image: url("../public/images/Background1.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

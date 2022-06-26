@@ -31,28 +31,21 @@ export default function Sleep() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <Script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0" />
-      
-      <div className={styles.bgWrap}>
-        <Image
-          alt="background"
-          src="/Background2.svg"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-      </div>
       <main className={styles.main}>
         <div className={styles.title}>Goodnight!</div>
 
         <Moon right="5em" top="2em" />
-        <midi-player src="/midi.mid" visualizer="#myVisualizer"></midi-player>
+        <midi-player
+          src="/midi.mid"
+          visualizer="#myVisualizer"
+        ></midi-player>
 
         <div className={styles.button}>
           <button
             onClick={downloadXML}
-            className="rounded-lg p-3 text-lg text-blue-100 bg-violet-700 hover:bg-indigo-900 hover:text-blue-400"
+            className="rounded-lg p-6 text-2xl text-blue-100 bg-violet-700 hover:bg-indigo-900 hover:text-blue-400"
           >
             Download
           </button>
