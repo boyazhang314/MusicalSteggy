@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Twinkle+Star&display=swap');
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    width: 70vh;
+    height: 30vh;
+
+    background-color: rgb(49 46 129);
+    border-radius: 2em;
+}
+
+.input {
+    display: none;
+}

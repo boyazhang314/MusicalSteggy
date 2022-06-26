@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Twinkle+Star&display=swap');
+
 .container {
     background-image: url("../public/images/Background2.svg");
     background-repeat: no-repeat;
@@ -10,31 +12,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .title {
     color: white;
     margin-top: 3%;
-    font-size: 12vh;
+    font-size: 15vh;
     font-family: 'Caveat', 'cursive';
     user-select: none;
-  }
-  
-.img {
-    width: 70%;
-    height: 70%;
-
-    user-select: none;
 }
   
-.steggy {
-    width: fit-content;
-
-    position: absolute;
-    right: 5em;
-    top: 13em;
-
-    z-index: 0;
-
-    user-select: none;
-}

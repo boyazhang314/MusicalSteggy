@@ -1,0 +1,17 @@
+
+.img {
+    width: 50vh;
+  
+    user-select: none;
+}
+  
+.steggy {
+    width: fit-content;
+  
+    position: absolute;
+  
+    z-index: 0;
+  
+    user-select: none;
+    cursor: pointer;
+}

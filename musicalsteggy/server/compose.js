@@ -2,8 +2,6 @@ import { HEAD, TAIL, START, BAR, STOP } from './notation/boilerplate.js'
 import { note, rest, back } from './notation/notes.js'
 import { TwinkleTwinkleLittleStar, HARMONY } from './notation/twinklestar.js'
 
-import * as fs from 'fs'
-
 const C = ['C', 'E', 'G', '']
 const F = ['F', 'A', 'C', '']
 const G = ['G', 'B', 'D', '']
@@ -61,9 +59,9 @@ export function accompaniment(lyrics) {
                 if (poi + 8 === binary.length) {
                     memo += STOP
                 }
-                if (j != 3) memo += back(4)
                 poi += 8
             }
+            if (j != 3) memo += back(4)
         }
 
         // last measure
@@ -89,13 +87,15 @@ export function textToBin(text) {
     return bin;
 }
 
-const sheet = HEAD 
+export function compose(lyrics) {
+    return HEAD 
             + TwinkleTwinkleLittleStar(1, 5, 1, 1)
             + '<part id="P2">'
-            + accompaniment('I am amazing and I love Kevin')
+            + accompaniment(lyrics)
             + '</part>'
             + TAIL
+}
 
-fs.writeFile('./ttls.musicxml', sheet, err => {
-    if (err) console.warn(err)
-})
+// fs.writeFile('./ttls.musicxml', compose('hello'), err => {
+//     if (err) console.warn(err)
+// })

@@ -10,13 +10,13 @@
 <stop offset="0.873967" stop-color="#210764"/>
 <stop offset="0.985537" stop-color="#11055c"/>
 </radialGradient>
-<linearGradient gradientTransform="matrix(1.51369 0 0 1.68347 46.3285 -773.17)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="1713.16" x2="1388.29" y1="880.843" y2="1535.43">
-<stop offset="0" stop-color="#07650e"/>
-<stop offset="1" stop-color="#022804"/>
+<linearGradient gradientTransform="matrix(1.51369 0 0 1.68347 46.3285 -773.17)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="1713.16" x2="1565.56" y1="880.843" y2="1518.2">
+<stop offset="0" stop-color="#064c0a"/>
+<stop offset="1" stop-color="#011b03"/>
 </linearGradient>
-<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="278.829" x2="3450.37" y1="761.118" y2="2706.52">
-<stop offset="0.355372" stop-color="#033f07"/>
-<stop offset="1" stop-color="#041c05"/>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="665.92" x2="1065.42" y1="1346.57" y2="2173.19">
+<stop offset="0" stop-color="#016708"/>
+<stop offset="1" stop-color="#012d04"/>
 </linearGradient>
 </defs>
 <clipPath id="ArtboardFrame">
@@ -49,7 +49,6 @@
 <path d="M1306.94 745.172C1307.95 744.667 1308.96 744.162 1309.97 743.657" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
 <path d="M1714.53 587.588C1713.02 587.083 1711.5 586.578 1709.99 586.073" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
 <path d="M1103.37 361.346C1102.86 362.356 1102.36 363.366 1101.85 364.376" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
-<path d="M2937.42 254.948C2937.42 191.572 2988.29 140.195 3051.04 140.195C3113.8 140.195 3164.67 191.572 3164.67 254.948C3164.67 318.324 3113.8 369.701 3051.04 369.701C2988.29 369.701 2937.42 318.324 2937.42 254.948Z" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
 <path d="M1627.99 1836.64C1628.48 1838.1 1628.96 1839.56 1629.45 1841.02" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
 <path d="M1891.03 1260.15C1890.32 1260.86 1888.11 1260.42 1888.11 1259.41C1888.11 1258.04 1889.69 1256.16 1891.03 1256.49C1892.21 1256.79 1891.89 1259.28 1891.03 1260.15Z" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
 <path d="M1483.32 1317.87C1485.27 1313.97 1483.8 1315.43 1487.7 1313.48" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
@@ -83,7 +82,7 @@
 <path d="M2913.53 513.808C2913.53 503.801 2920.14 495.688 2928.29 495.688C2936.45 495.688 2943.06 503.801 2943.06 513.808C2943.06 523.815 2936.45 531.928 2928.29 531.928C2920.14 531.928 2913.53 523.815 2913.53 513.808Z" fill="#fffcc3" fill-rule="evenodd" opacity="1" stroke="#fffcc3" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.94021"/>
 </g>
 <g clip-path="url(#ArtboardFrame)" id="Layer-4" vectornator:layerName="Layer 4">
-<path d="M2680.14 2264.77C2676.2 2256.9 2590.83 2253.24 2569.7 2233.62C2371.08 2049.19 2204.57 1913.54 1958.04 1797.53C1406.64 1538.04 783.064 941.841 111.757 1200.04C-190.087 1316.13-327.729 1886-72.3049 2123.18C150.556 2330.12 593.529 2359.21 876.324 2457.32C1131.19 2545.75 1375.36 2740.5 1655.05 2740.5" fill="url(#LinearGradient_2)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M4241.56 2464.99C4237.62 2457.13 4059.11 2377.23 4037.98 2357.61C3839.37 2173.19 3284.53 1992.65 3038 1876.64C2486.6 1617.16 783.064 941.841 111.757 1200.04C-190.087 1316.13-327.729 1886-72.3049 2123.18C150.556 2330.12 593.529 2359.21 876.324 2457.32C1131.19 2545.75 1375.36 2740.5 1655.05 2740.5" fill="url(#LinearGradient_2)" fill-rule="evenodd" opacity="1" stroke="none"/>
 </g>
 <g id="Layer-5" vectornator:layerName="Layer 5"/>
 </svg>

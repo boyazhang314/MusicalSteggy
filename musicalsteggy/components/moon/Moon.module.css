@@ -1,0 +1,15 @@
+.moon {
+    aspect-ratio: 1/1;
+    height: 20vh;
+    background-color: #ffffc4;
+    border-radius: 100%;
+  
+    position: absolute;
+  
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.moon:hover {
+    box-shadow: 0 0 3em gold, 0 0 5em gold, inset 0 20px 20px 40px #ffffc4;
+}
