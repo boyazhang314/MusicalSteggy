@@ -29,7 +29,7 @@ export default function Sleep() {
     }
 
     return (
-        <div className={styles.container}>
+        <body background="/images/background2.svg" className={styles.container}>
             <main className={styles.main}>
                 <div className={styles.title}>Goodnight!</div>
 
@@ -44,6 +44,6 @@ export default function Sleep() {
 
                 <Steggy src="/images/Sleepy.svg" width='50vh' bottom='5em' left='5em' />
             </main>
-        </div>
+        </body>
     )
 }

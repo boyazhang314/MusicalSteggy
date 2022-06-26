@@ -46,7 +46,7 @@ export default function Upload() {
     ) : ('')
 
     return (
-        <div className={styles.container}>
+        <body background="/images/background3.svg" className={styles.container}>
             <div className={styles.main}>
                 <div className={styles.title}>Steggy&apos;s Interpretation</div>
 
@@ -58,6 +58,6 @@ export default function Upload() {
 
                 <Steggy src="/images/Steggy2.svg" width='50vh' bottom='1em' right='3em' />
             </div>
-        </div>
+        </body>
     )
 }
