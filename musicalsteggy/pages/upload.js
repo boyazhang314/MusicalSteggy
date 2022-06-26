@@ -47,7 +47,7 @@ export default function Upload() {
       <div className={styles.bgWrap}>
         <Image
           alt="background"
-          src="/background3.svg"
+          src="/Background3.svg"
           layout="fill"
           objectFit="cover"
           quality={100}
