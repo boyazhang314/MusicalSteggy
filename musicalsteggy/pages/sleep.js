@@ -37,12 +37,12 @@ export default function Sleep() {
 
                 <div className={styles.button}>
                     <button onClick={downloadXML}
-                            className="rounded-lg p-3 text-lg text-blue-100 bg-violet-700 hover:bg-indigo-900 hover:text-blue-400">
+                            className="rounded-lg p-6 text-2xl text-blue-100 bg-violet-700 hover:bg-indigo-900 hover:text-blue-400">
                                 Download
                     </button>
                 </div>
 
-                <Steggy src="/images/Sleepy.svg" width='65vh' bottom='5em' left='5em' />
+                <Steggy src="/images/Sleepy.svg" width='50vh' bottom='5em' left='5em' />
             </main>
         </div>
     )
