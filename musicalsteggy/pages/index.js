@@ -25,7 +25,6 @@ export default function Home() {
       }
       const res = await fetch("/api/music", config)
       const data = await res.json()
-      console.log(data)
     } catch (err) {
       console.warn(err)
     }

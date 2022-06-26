@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import styles from "../styles/Sleep.module.css"
 import Image from "next/image"
@@ -8,7 +8,11 @@ import Moon from "../components/moon/Moon"
 import Steggy from "../components/steggy/Steggy"
 
 export default function Sleep() {
-  const downloadXML = async () => {
+  const [musicXML, setMusicXML] = useState(null)
+  const [midiFile, setMidiFile] = useState(null)
+  const [count, setCount] = useState(0)
+
+  const getMusicXML = async () => {
     try {
       const config = {
         method: "GET",
@@ -16,15 +20,44 @@ export default function Sleep() {
       const res = await fetch("/api/music", config)
       const data = await res.json()
 
-      const blob = new Blob([data.musicXML], {
-        type: "text/plain",
-      })
+      setMusicXML(data.musicXML)
+    } catch (err) {
+      console.warn(err)
+    }
+  }
 
-      const url = URL.createObjectURL(blob)
-      const link = document.createElement("a")
-      link.download = "TwinkleTwinkleLittleStar.musicxml"
-      link.href = url
-      link.click()
+  useEffect(() => {
+    getMusicXML()
+  }, [])
+
+  useEffect(() => {
+    if (musicXML !== null && count === 0) {
+      midi()
+      setCount(1)
+    }
+  }, [musicXML])
+
+  const downloadXML = async () => {
+    const blob = new Blob([musicXML], {
+      type: "text/plain",
+    })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement("a")
+    link.download = "TwinkleTwinkleLittleStar.musicxml"
+    link.href = url
+    link.click()
+  }
+
+  const midi = async () => {
+    try {
+      const config = {
+        method: "POST",
+        body: musicXML
+      }
+      const res = await fetch("http://localhost:5000/convert", config)
+      const data = await res.blob()
+      var objectURL = URL.createObjectURL(data)
+      setMidiFile(objectURL)
     } catch (err) {
       console.warn(err)
     }
@@ -37,8 +70,9 @@ export default function Sleep() {
         <div className={styles.title}>Goodnight!</div>
 
         <Moon right="5em" top="2em" />
+
         <midi-player
-          src="/midi.mid"
+          src={midiFile}
           visualizer="#myVisualizer"
         ></midi-player>
 

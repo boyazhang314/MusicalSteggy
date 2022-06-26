@@ -8,6 +8,7 @@ export default function handler(req, res) {
     const job = JSON.parse(req.body).job
     if (job === 'song') {
       lyrics.text = JSON.parse(req.body).text
+      lyrics.musicXML = compose(lyrics.text)
       res.status(200).json({ success: lyrics.text })
     } else if (job === 'interpret') {
       const text = JSON.parse(req.body).text
@@ -15,8 +16,6 @@ export default function handler(req, res) {
       res.status(200).json({ interpretation: interpretation })
     }
   } else if (req.method === "GET") {
-    lyrics.musicXML = compose(lyrics.text)
     res.status(200).json({ musicXML: lyrics.musicXML })
-    console.log(decipher(lyrics.musicXML))
   }
 }
