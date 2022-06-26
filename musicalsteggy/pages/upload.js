@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Link from "next/link"
 import styles from "../styles/Upload.module.css"
 import Image from "next/image"
-import background from "../public/images/background3.svg"
 
 import Moon from "../components/moon/Moon"
 import Steggy from "../components/steggy/Steggy"
