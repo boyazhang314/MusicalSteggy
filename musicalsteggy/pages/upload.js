@@ -50,7 +50,7 @@ export default function Upload() {
             <div className={styles.main}>
                 <div className={styles.title}>Steggy's Interpretation</div>
 
-                <Moon top='5em' right='25em' height='20vh' />
+                <Moon top='5em' right='20em' height='20vh' />
 
                 <DragDrop handleFiles={upload} />
 

@@ -42,7 +42,7 @@ export default function Sleep() {
                     </button>
                 </div>
 
-                <Steggy src="/images/Sleepy.svg" width='65vh' bottom='5em' left='5em' />
+                <Steggy src="/images/Sleepy.svg" width='50vh' bottom='5em' left='5em' />
             </main>
         </div>
     )
