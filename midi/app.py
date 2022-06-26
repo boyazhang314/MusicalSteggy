@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 CORS(app, resources={r'/*': {'origins': '*'}})
-@cross_origin(origins = "http://localhost:5000")
+@cross_origin(origins = "https://musicxml2midi.herokuapp.com")
 
 @app.route('/', methods=['GET'])
 def home():

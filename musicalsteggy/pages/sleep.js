@@ -54,7 +54,7 @@ export default function Sleep() {
         method: "POST",
         body: musicXML
       }
-      const res = await fetch("http://localhost:5000/convert", config)
+      const res = await fetch("https://musicxml2midi.herokuapp.com/convert", config)
       const data = await res.blob()
       var objectURL = URL.createObjectURL(data)
       setMidiFile(objectURL)
