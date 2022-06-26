@@ -48,7 +48,7 @@ export default function Upload() {
     return (
         <div className={styles.container}>
             <div className={styles.main}>
-                <div className={styles.title}>Steggy's Interpretation</div>
+                <div className={styles.title}>Steggy&apos;s Interpretation</div>
 
                 <Moon top='5em' right='20em' height='20vh' />
 
