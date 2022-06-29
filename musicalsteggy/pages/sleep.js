@@ -10,7 +10,6 @@ import Stars from "../components/stars/Stars"
 export default function Sleep() {
   const [musicXML, setMusicXML] = useState(null)
   const [midiFile, setMidiFile] = useState(null)
-  const [count, setCount] = useState(0)
 
   const getMusicXML = async () => {
     try {
@@ -31,9 +30,8 @@ export default function Sleep() {
   }, [])
 
   useEffect(() => {
-    if (musicXML !== null && count === 0) {
+    if (musicXML !== null) {
       midi()
-      setCount(1)
     }
   }, [musicXML])
 
