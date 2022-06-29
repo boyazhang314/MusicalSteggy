@@ -9,6 +9,7 @@ import Stars from "../components/stars/Stars"
 
 export default function Sleep() {
   const [musicXML, setMusicXML] = useState(null)
+  const [xmlFile, setXmlFile] = useState(null)
   const [midiFile, setMidiFile] = useState(null)
 
   const getMusicXML = async () => {
@@ -32,11 +33,13 @@ export default function Sleep() {
   useEffect(() => {
     if (musicXML !== null) {
       midi()
+      setXmlFile(musicXML)
+      setMusicXML(null)
     }
   }, [musicXML])
 
   const downloadXML = async () => {
-    const blob = new Blob([musicXML], {
+    const blob = new Blob([xmlFile], {
       type: "text/plain",
     })
     const url = URL.createObjectURL(blob)
