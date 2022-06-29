@@ -1,11 +1,11 @@
 import React, { useState } from "react"
-import Link from "next/link"
 import styles from "../styles/Upload.module.css"
-import Image from "next/image"
 
 import Moon from "../components/moon/Moon"
 import Steggy from "../components/steggy/Steggy"
 import DragDrop from "../components/dragDrop/DragDrop"
+import Hill from "../components/hill/Hill"
+import Stars from "../components/stars/Stars"
 
 const fileTypes = ["musicxml", "xml"]
 
@@ -47,18 +47,24 @@ export default function Upload() {
       <div className={styles.main}>
         <div className={styles.title}>Steggy&apos;s Interpretation</div>
 
-        <Moon top='5em' right='20em' height='20vh' />
+        <Hill src="/images/hills/Hill3-1.svg" bottom='0' right='0' width='100%' />
+        <Hill src="/images/hills/Hill3-2.svg" bottom='0' left='0' width='100%' />
+        <Hill src="/images/hills/Hill3-3.svg" bottom='0' right='0' width='100%' />
+
+        <Moon top='5em' left='20em' height='20vh' />
 
         <DragDrop handleFiles={upload} />
 
         {message}
 
         <Steggy
-          src="/images/Steggy2.svg"
+          src="/images/steggy/Steggy2.svg"
           width="50vh"
           bottom="1em"
           right="3em"
         />
+
+        <Stars pattern={3} />
       </div>
     </div>
   )

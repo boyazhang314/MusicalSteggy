@@ -10,9 +10,10 @@
 }
 
 .container {
-  background-image: url("../public/images/Background1.svg");
+  background-image: url("../public/images/NightSky.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  max-height: 100vh;
 }
 
 .main {
@@ -29,6 +30,8 @@
   font-size: 12vh;
   font-family: 'Twinkle Star', 'cursive';
   user-select: none;
+
+  z-index: 1;
 }
 
 .description {
@@ -42,6 +45,8 @@
   align-items: center;
 
   user-select: none;
+
+  z-index: 1;
 }
 
 .button {

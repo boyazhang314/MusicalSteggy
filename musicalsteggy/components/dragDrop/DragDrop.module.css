@@ -13,6 +13,7 @@
 
     background-color: rgb(49 46 129);
     border-radius: 2em;
+    z-index: 100;
 }
 
 .input {

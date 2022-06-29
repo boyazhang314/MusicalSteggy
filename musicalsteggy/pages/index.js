@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import Link from "next/link"
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
-import Image from "next/image"
 
 import Moon from "../components/moon/Moon"
 import Steggy from "../components/steggy/Steggy"
+import Hill from "../components/hill/Hill"
+import Stars from "../components/stars/Stars"
 
 export default function Home() {
   const [lyrics, setLyrics] = useState("")
@@ -44,8 +45,20 @@ export default function Home() {
         <link rel="icon" href="/images/Music.svg" />
       </Head>
 
+      <div className='fixed select-none' style={{ width: '100%' }}>
+          <img src='/images/stars/Stars1-Blue.svg'></img>
+      </div>
+      <div className='fixed select-none' style={{ width: '100%' }}>
+          <img src='/images/stars/Stars1-Yellow.svg'></img>
+      </div>
+
+      <Hill src="/images/hills/Hill1-1.svg" bottom='0' right='0' width='100%' />
+      <Hill src="/images/hills/Hill1-2.svg" bottom='0' left='0' width='100%' />
+      <Hill src="/images/hills/Hill1-3.svg" bottom='0' right='0' width='100%' />
+
       <div className={styles.container}>
         <main className={styles.main}>
+
           <div className={styles.title}>Musical Steggy</div>
 
           <div className={styles.description}>
@@ -82,11 +95,13 @@ export default function Home() {
           </div>
 
           <Steggy
-            src="/images/Steggy.svg"
+            src="/images/steggy/Steggy.svg"
             width="50vh"
             right="5em"
             bottom="1em"
           />
+
+          <Stars pattern={1} />
         </main>
       </div>
     </>

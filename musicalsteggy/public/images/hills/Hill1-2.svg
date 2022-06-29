@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 3840 2160" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(1.10977 0 0 0.990501 84.4026 288.157)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="-191.455" x2="2906.32" y1="1408.78" y2="1278.28">
+<stop offset="0" stop-color="#024101"/>
+<stop offset="1" stop-color="#000000"/>
+</linearGradient>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="2160" width="3840" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer-4" vectornator:layerName="Layer 4">
+<path d="M-19.4857 1252.27C479.469 1061.41 847.46 1246.35 1262.11 1503.36C1414.92 1598.07 2296.58 2176.46 2134.57 2361.22C1900.05 2628.68 123.409 2259.81-263.626 2298.19" fill="url(#LinearGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</svg>

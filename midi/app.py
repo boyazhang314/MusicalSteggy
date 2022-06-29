@@ -16,13 +16,8 @@ def home():
 @app.route('/convert', methods=['GET', 'POST'])
 def midiConvert():
     musicXML = request.data
-
     midiFile = convert(musicXML)
-    
     return midiFile
-    # response = midiFile
-    # #response.headers["Access-Control-Allow-Origin"] = "*"
-    # return send_file(midiFile, download_name="midi.mid")
     
 def convert(file):
     c = converter.parse(file)

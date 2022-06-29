@@ -1,16 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Twinkle+Star&display=swap');
 
-.bgWrap {
-    position: fixed;
-    margin:-1px;
-    height: 101vh;
-    width: 101vw;
-    overflow: hidden;
-    z-index: -1;
-  }
-
 .container {
-    background-image: url("../public/images/Background2.svg");
+    background-image: url("../public/images/NightSky.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -30,5 +21,11 @@
     font-size: 15vh;
     font-family: 'Caveat', 'cursive';
     user-select: none;
+    z-index: 1;
 }
-  
+
+.button {
+    z-index: 1;
+    margin-top: 2%;
+}
+

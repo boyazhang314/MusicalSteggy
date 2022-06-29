@@ -10,7 +10,7 @@
   }
 
 .container {
-    background-image: url("../public/images/Background3.svg");
+    background-image: url("../public/images/NightSky.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -25,7 +25,7 @@
 
 .title {
     color: rgb(255, 225, 57);
-    margin-top: 10%;
+    margin-top: 8%;
     margin-bottom: 2%;
     font-size: 8vh;
     font-family: 'Caveat', 'cursive';
@@ -50,4 +50,6 @@
     border-radius: 1em;
 
     user-select: auto;
+
+    z-index: 1;
 }
