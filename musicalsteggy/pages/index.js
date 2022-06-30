@@ -7,6 +7,7 @@ import Moon from "../components/moon/Moon"
 import Steggy from "../components/steggy/Steggy"
 import Hill from "../components/hill/Hill"
 import Stars from "../components/stars/Stars"
+import NightSky from "../components/nightSky/NightSky"
 
 export default function Home() {
   const [lyrics, setLyrics] = useState("")
@@ -39,6 +40,8 @@ export default function Home() {
 
   return (
     <>
+      <NightSky />
+
       <Head>
         <title>Musical Steggy</title>
         <meta name="music steganography" content="web app" />

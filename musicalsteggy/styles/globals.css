@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Twinkle+Star&display=swap');
+
 html,
 body {
   padding: 0;
@@ -22,6 +24,31 @@ textarea {
   background-color: transparent;
   resize: none;
   outline: none;
+}
+
+#label-file-upload {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#drag-file-element {
+  position: absolute;
+  border-radius: 2em;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#label-file-upload.drag-active, #label-file-upload:active {
+  border-radius: 2em;
+  background-color: rgb(26, 24, 85);
 }
 
 * {
