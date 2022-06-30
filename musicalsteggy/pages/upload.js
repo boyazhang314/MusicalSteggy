@@ -52,7 +52,7 @@ export default function Upload() {
       <div className={styles.container}>
         <NightSky />
         <div className={styles.main}>
-          <div className={styles.title}>Steggy&apos;s Interpretation</div>
+          <div className={styles.title}>Steggy Interpretation</div>
 
           <Hill src="/images/hills/Hill3-1.svg" bottom='0' right='0' width='100%' />
           <Hill src="/images/hills/Hill3-2.svg" bottom='0' left='0' width='100%' />
