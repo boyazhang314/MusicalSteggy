@@ -1,5 +1,6 @@
 # MusicalSteggy
 ### [Try it out!](https://musicalsteggy.co/)
+(NOTE: May take a while to wake up the Heroku server :D)
 [![Website Screenshot](homepage.png)](https://musicalsteggy.co/)
 
 ## About
@@ -13,6 +14,8 @@ Musical Steggy is a web app that performs music steganography, hiding text in mu
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [MusicXML](https://www.musicxml.com/)
+
+Hosted using [Vercel](https://vercel.com/) with [Heroku](https://www.heroku.com/) for audio playback features
 
 ## Prerequisites
 
